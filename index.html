@@ -7,21 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peso Ideal</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <img id="logo" src="Imagens/logo.png" alt="" />
-        <div id="dadosCabecalho">
-            <h1 id="nomeProfissional">Katy Perry</h1>
-            <p id="email">katyperry@gmail.com</p>
-            <p id="crn">CRN: 1234566789</p>
+        <div id="head">
+            <img id="logo" src="Imagens/logo-peso-ideal.png" alt="" />
+
+            <div id="dadosCabecalho">
+                <h1 id="nomeProfissional">Katy Perry</h1>
+                <p id="email">katyperry@gmail.com</p>
+                <p id="crn">CRN: 1234566789</p>
+            </div>
         </div>
     </header>
 
     <main>
-        <h1>Relatorio Comparativo Antropometrico</h1>
-        <h2 class="" id="nomeCliente">nomeCliente</h2>
+        <h1 id="textoRelatorio">Relatorio Comparativo Antropometrico</h1>
+
         <div id="input">
             <h1 id="h1Input">Insira seus dados:</h1>
             <input class="inputDados" id="nomeInput" type="text" placeholder="Nome">
@@ -30,7 +34,10 @@
             <input class="inputDados" id="pesoInput" type="number" placeholder="Peso">
             <input class="sexo" name="sexo" type="radio" value="f" checked="checked" /> Feminino
             <input class="sexo" name="sexo" type="radio" value="m" /> Masculino
-            <button class="inputDados" onclick="mostrar()" id="buttonInput">Calcular</button>
+            <button class="inputDados" onclick="checarDados()" id="buttonInput">Calcular</button>
+        </div>
+        <div id="exibirNome">
+            <h2 class="" id="nomeCliente">Nome: </h2>
         </div>
         <div id="dados" class="dados">
             <h1 class="lista" id="data">Data</h1>
@@ -56,6 +63,8 @@
             <h1 class="lista" id="massaGorda">Massa Gorda</h1>
             <p class="lista" id="p5">5</p>
             <p class="lista" id="p10">10</p>
+
+
         </div>
     </main>
 

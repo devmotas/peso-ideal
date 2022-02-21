@@ -1,13 +1,23 @@
 var peso = document.getElementById("pesoInput")
 var nome = document.getElementById("nomeInput")
+var nomeCliente = document.getElementById("nomeCliente")
 var altura = document.getElementById("alturaInput")
 var idade = document.getElementById("idadeInput")
 var sexo = document.querySelectorAll('.sexo');
 var input = document.getElementById("input")
 var dados = document.getElementById("dados")
 
+function checarDados() {
+    if (nome.value == "") { alert("Insira um Nome.") }
+    if (altura.value == "") { alert("Insira uma Altura.") }
+    if (idade.value == "") { alert("Insira uma Idade.") }
+    if (peso.value == "") { alert("Insira um Peso.") }
+    if (nome.value != "" && altura.value != "" && idade.value != "" && peso.value != "") { mostrar() }
+}
+
 function mostrar() {
-    document.getElementById("nomeCliente").innerHTML = nome.value
+    nomeCliente.innerHTML += nome.value
+    nomeCliente.style.display = ("block")
     document.getElementById("data").innerHTML += " " + data()
     document.getElementById("p1").innerHTML = altura.value
     document.getElementById("p2").innerHTML = peso.value
@@ -49,12 +59,12 @@ function imc(p) {
 }
 
 function massaGorda(pe) {
-    checar()
-    massa = (1.20 * imc(pe)) + (0.23 * idade.value) - (10.8 * checar()) - 5.4
+    checarSexo()
+    massa = (1.20 * imc(pe)) + (0.23 * idade.value) - (10.8 * checarSexo()) - 5.4
     return massa.toFixed(2)
 }
 
-function checar() {
+function checarSexo() {
     var sex = 0
     for (var i = 0 in sexo)
         if (sexo[i].checked)
