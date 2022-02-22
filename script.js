@@ -16,7 +16,7 @@ function checarDados() {
 }
 
 function mostrar() {
-    nomeCliente.innerHTML += nome.value
+    nomeCliente.innerHTML = nome.value
     nomeCliente.style.display = ("block")
     document.getElementById("data").innerHTML += " " + data()
     document.getElementById("p1").innerHTML = altura.value
