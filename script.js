@@ -6,6 +6,9 @@ var idade = document.getElementById("idadeInput")
 var sexo = document.querySelectorAll('.sexo');
 var input = document.getElementById("input")
 var dados = document.getElementById("dados")
+var logo = document.getElementById("logo")
+var dadosCabecalho = document.getElementById("dadosCabecalho")
+var header = document.getElementById("head")
 
 function checarDados() {
     if (peso.value == "" || idade.value == "" || altura.value == "" || nome.value == "") {
@@ -42,6 +45,9 @@ function mostrar30Dias() {
 function mudarTela() {
     input.style.display = "none"
     dados.style.display = "grid"
+    logo.style.display = "none"
+    dadosCabecalho.style.display = "block"
+    header.style.height = "100px"
 }
 
 function data() {
