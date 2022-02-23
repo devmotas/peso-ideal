@@ -8,10 +8,9 @@ var input = document.getElementById("input")
 var dados = document.getElementById("dados")
 
 function checarDados() {
-    if (nome.value == "") { alert("Insira um Nome.") }
-    if (altura.value == "") { alert("Insira uma Altura.") }
-    if (idade.value == "") { alert("Insira uma Idade.") }
-    if (peso.value == "") { alert("Insira um Peso.") }
+    if (peso.value == "" || idade.value == "" || altura.value == "" || nome.value == "") {
+        { alert("Dados incompletos!") }
+    }
     if (nome.value != "" && altura.value != "" && idade.value != "" && peso.value != "") { mostrar() }
 }
 
@@ -46,8 +45,12 @@ function mudarTela() {
 }
 
 function data() {
-    var date = new Date()
-    return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    let date = new Date()
+    if (date.getMonth() < 10) {
+        return date.getDate() + "/" + "0" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    } else {
+        return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    }
 }
 
 function pesoIdeal() {
