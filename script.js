@@ -18,6 +18,7 @@ function checarDados() {
 }
 
 function mostrar() {
+    window.location.href = "resultado.html"
     nomeCliente.innerHTML = nome.value.toUpperCase()
     nomeCliente.style.display = ("block")
     document.getElementById("data").innerHTML += " " + data()

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(Imagens/background.jpg);
+    background-size: cover;
+    background-position: center right;
+}
+
+#head {
+    width: 100%;
+    height: 100px;
+}
+
+#dadosCabecalho {
+    height: 150px;
+    padding: 15px;
+    margin: auto;
+    margin: 50px;
+}
+
+#dados>p {
+    padding: 1.1vw;
+    background-color: #fa45963b;
+    border-radius: 3px;
+}
+
+#textoRelatorio {
+    text-align: center;
+    padding: 20px;
+    display: block;
+}
+
+#nomeCliente {
+    padding: 5px;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.dados {
+    justify-items: center;
+    display: grid;
+    grid-template-areas: "data hoje proximoMes" "altura p1 p6" "peso p2 p7" "pesoIdeal p3 p8" "imc p4 p9" "massaGorda p5 p10";
+    width: 70%;
+    max-height: 90%;
+    margin: auto;
+}
+
+.lista {
+    width: 90%;
+    padding: 5px;
+}
+
+#dados>p,
+#hoje,
+#proximoMes {
+    text-align: center;
+}
