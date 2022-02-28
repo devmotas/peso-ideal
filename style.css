@@ -46,6 +46,10 @@ body {
     border: none;
 }
 
+#peso30Dias {
+    display: none;
+}
+
 #buttonInput,
 a {
     text-decoration: none;

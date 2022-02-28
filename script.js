@@ -3,12 +3,15 @@ const nome = document.getElementById("nomeInput")
 const nomeCliente = document.getElementById("nomeCliente")
 const altura = document.getElementById("alturaInput")
 var idade = document.getElementById("idadeInput")
-var sexo = document.querySelectorAll('.sexo');
+var sexo = document.querySelectorAll('.sexo')
 var input = document.getElementById("input")
 var dados = document.getElementById("dados")
 var logo = document.getElementById("logo")
 var dadosCabecalho = document.getElementById("dadosCabecalho")
 var header = document.getElementById("head")
+var inserir30Dias = document.getElementById("adicionar30Dias")
+var peso30Dias = document.getElementById("peso30Dias")
+
 
 function checarDados() {
     if (peso.value == "" || idade.value == "" || altura.value == "" || nome.value == "") {
@@ -17,8 +20,14 @@ function checarDados() {
     if (nome.value != "" && altura.value != "" && idade.value != "" && peso.value != "") { mostrar() }
 }
 
+function adicionarDados() {
+    inserir30Dias.style.display = "none"
+    peso30Dias.style.display = "block"
+
+}
+
+
 function mostrar() {
-    window.location.href = "resultado.html"
     nomeCliente.innerHTML = nome.value.toUpperCase()
     nomeCliente.style.display = ("block")
     document.getElementById("data").innerHTML += " " + data()
@@ -32,6 +41,7 @@ function mostrar() {
     console.log(`Massa Gorda = ${massaGorda()}`);
     mostrar30Dias()
     mudarTela()
+
 }
 
 function mostrar30Dias() {
@@ -40,6 +50,7 @@ function mostrar30Dias() {
     document.getElementById("p8").innerHTML = pesoIdeal()
     document.getElementById("p9").innerHTML = imc(pesoIdeal())
     document.getElementById("p10").innerHTML = massaGorda(pesoIdeal())
+    window.location.href = "resultado.html"
 }
 
 
