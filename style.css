@@ -24,6 +24,14 @@ body {
     display: block;
 }
 
+#dadosCabecalho {
+    height: 150px;
+    padding: 15px;
+    margin: auto;
+    margin: 50px;
+    display: none;
+}
+
 #textoRelatorio {
     text-align: center;
     padding: 20px;
@@ -46,16 +54,45 @@ body {
     border: none;
 }
 
-#peso30Dias {
+#nomeCliente {
+    padding: 5px;
+    text-align: center;
+    font-size: 3vw;
     display: none;
 }
 
-#buttonInput,
-a {
-    text-decoration: none;
+.dados {
+    justify-items: center;
+    display: grid;
+    grid-template-areas: "data hoje proximoMes" "altura p1 p6" "peso p2 p7" "pesoIdeal p3 p8" "imc p4 p9" "massaGorda p5 p10";
+    width: 70%;
+    max-height: 90%;
+    margin: auto;
+    display: none;
+}
+
+#dados>p {
+    padding: 1.1vw;
+    background-color: #fa45963b;
+    border-radius: 3px;
+}
+
+.lista {
+    width: 90%;
+    padding: 5px;
+}
+
+#dados>p,
+#hoje,
+#proximoMes {
+    text-align: center;
 }
 
 #buttonInput:hover {
     width: 400;
     background-color: #fa4597;
+}
+
+#peso30Dias {
+    display: none;
 }

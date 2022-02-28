@@ -50,7 +50,6 @@ function mostrar30Dias() {
     document.getElementById("p8").innerHTML = pesoIdeal()
     document.getElementById("p9").innerHTML = imc(pesoIdeal())
     document.getElementById("p10").innerHTML = massaGorda(pesoIdeal())
-    window.location.href = "resultado.html"
 }
 
 
