@@ -30,12 +30,11 @@
             <input class="inputDados" id="alturaInput" type="number" placeholder="Altura">
             <input class="inputDados" id="idadeInput" type="number" placeholder="Idade">
             <input class="inputDados" id="pesoInput" type="number" placeholder="Peso">
+            <input class="inputDados" id="pesoInputTrinta" type="number" placeholder="Peso 30 Dias (opcional) ">
             <input class="sexo" name="sexo" type="radio" value="f" checked="checked" /> Feminino
             <input class="sexo" name="sexo" type="radio" value="m" /> Masculino
-            <input class="inputDados" id="peso30Dias" type="number" placeholder="Peso 30 dias">
             <button class="inputDados" onclick="checarDados()" id="buttonInput">Calcular</button>
         </div>
-
 
         <div id="exibirNome">
             <h2 class="" id="nomeCliente">Nome: </h2>
@@ -65,7 +64,21 @@
             <p class="lista" id="p5">-</p>
             <p class="lista" id="p10">-</p>
         </div>
+        <div id="comparativo">
+            <button class="buttonComparativo" onclick="mostrarComparativo()" id="buttonComparativo">Mostrar Comparativo</button>
 
+            <div id="resultado">
+                <h1 id="resultadoNome">-</h1>
+                <h1 id="resultadoIdade">-</h1>
+                <h1 id="resultadoSexo">-</h1>
+                <h1 id="resultadoPeso">-</h1>
+                <h1 id="resultadoPesoIdeal">-</h1>
+                <h1 id="resultadoImc">-</h1>
+                <h1 id="resultadoMassaGorda">-</h1>
+            </div>
+            <button class="novaConsulta" onclick="atualizarPagina()" id="novaConsulta">Nova Consulta</button>
+
+        </div>
     </main>
 
 

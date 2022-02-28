@@ -11,7 +11,10 @@ var dadosCabecalho = document.getElementById("dadosCabecalho")
 var header = document.getElementById("head")
 var inserir30Dias = document.getElementById("adicionar30Dias")
 var peso30Dias = document.getElementById("peso30Dias")
-
+var pesoInputTrinta = document.getElementById("pesoInputTrinta")
+var hoje = document.getElementById("hoje")
+var proximoMes = document.getElementById("proximoMes")
+var buttonComparativo = document.getElementById("buttonComparativo")
 
 function checarDados() {
     if (peso.value == "" || idade.value == "" || altura.value == "" || nome.value == "") {
@@ -23,9 +26,16 @@ function checarDados() {
 function adicionarDados() {
     inserir30Dias.style.display = "none"
     peso30Dias.style.display = "block"
-
 }
 
+function checarInput30Dias() {
+    if (pesoInputTrinta.value != "") {
+        hoje.innerHTML = ("Antes")
+        proximoMes.innerHTML = ("Depois")
+
+    }
+    return pesoInputTrinta.value == "" ? pesoIdeal() : pesoInputTrinta.value
+}
 
 function mostrar() {
     nomeCliente.innerHTML = nome.value.toUpperCase()
@@ -46,10 +56,10 @@ function mostrar() {
 
 function mostrar30Dias() {
     document.getElementById("p6").innerHTML = altura.value
-    document.getElementById("p7").innerHTML = pesoIdeal()
+    document.getElementById("p7").innerHTML = checarInput30Dias()
     document.getElementById("p8").innerHTML = pesoIdeal()
-    document.getElementById("p9").innerHTML = imc(pesoIdeal())
-    document.getElementById("p10").innerHTML = massaGorda(pesoIdeal())
+    document.getElementById("p9").innerHTML = imc(checarInput30Dias())
+    document.getElementById("p10").innerHTML = massaGorda(checarInput30Dias())
 }
 
 
@@ -59,6 +69,8 @@ function mudarTela() {
     logo.style.display = "none"
     dadosCabecalho.style.display = "block"
     header.style.height = "100px"
+    buttonComparativo.style.display = "block"
+
 }
 
 function data() {
@@ -90,4 +102,23 @@ function checarSexo() {
         if (sexo[i].checked)
             sex = sexo[i].value
     return (sex == "m" ? 1 : 0).toFixed(2)
+}
+
+function mostrarComparativo() {
+    nomeCliente.style.display = "none"
+    buttonComparativo.style.display = "none"
+    novaConsulta = document.getElementById("novaConsulta")
+    resultadoIdade = document.getElementById("resultadoIdade")
+    resultadoSexo = document.getElementById("resultadoSexo")
+    resultadoPeso = document.getElementById("resultadoPeso")
+    resultadoPesoIdeal = document.getElementById("resultadoPesoIdeal")
+    resultadoImc = document.getElementById("resultadoImc")
+    resultadoMassaGorda = document.getElementById("resultadoMassaGorda")
+    resultado = document.getElementById("resultado")
+
+    resultado.style.display = "block"
+    dados.style.display = "none"
+    novaConsulta.style.display = "block"
+
+
 }
