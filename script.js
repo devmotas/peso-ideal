@@ -47,22 +47,22 @@ function mostrar() {
     document.getElementById("p3").innerHTML = pesoIdeal()
     document.getElementById("p4").innerHTML = imc(peso.value)
     document.getElementById("p5").innerHTML = massaGorda(peso.value)
-    console.log(`Altura = ${altura.value}`);
-    console.log(`IMC = ${imc()}`);
-    console.log(`Massa Gorda = ${massaGorda()}`);
     mostrar30Dias()
     mudarTela()
 
 }
 
 function mostrar30Dias() {
-    document.getElementById("p6").innerHTML = altura.value
+    document.getElementById("p6").innerHTML = calcularAltura()
     document.getElementById("p7").innerHTML = checarInput30Dias(pesoIdeal())
     document.getElementById("p8").innerHTML = pesoIdeal()
     document.getElementById("p9").innerHTML = imc(checarInput30Dias(pesoIdeal()))
     document.getElementById("p10").innerHTML = massaGorda(checarInput30Dias(pesoIdeal()))
 }
 
+function calcularAltura() {
+    return altura.value < 100 ? altura.value : altura.value / 100
+}
 
 function mudarTela() {
     input.style.display = "none"
@@ -84,11 +84,11 @@ function data() {
 }
 
 function pesoIdeal() {
-    return (Math.pow(altura.value, 2) * 21.7).toFixed(2)
+    return (Math.pow(calcularAltura(), 2) * 21.7).toFixed(2)
 }
 
 function imc(p) {
-    return (p / Math.pow(altura.value, 2)).toFixed(2)
+    return (p / Math.pow(calcularAltura(), 2)).toFixed(2)
 }
 
 function massaGorda(pe) {
