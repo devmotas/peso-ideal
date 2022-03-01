@@ -163,6 +163,10 @@ button {
         padding: 5px;
         font-size: 5vw;
     }
+    #dados>h1,
+    #nomeCliente {
+        font-weight: bold;
+    }
     #dados>h1 {
         font-size: 5vw;
     }
@@ -171,7 +175,7 @@ button {
     }
     .imprimirResultado {
         padding: 7px;
-        font-weight: lighter;
+        font-weight: bold;
         font-size: 5vw;
     }
 }
