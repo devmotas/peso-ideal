@@ -45,6 +45,7 @@ body {
     text-align: center;
     max-width: 350px;
     margin-left: 15vw;
+    margin-right: 15px;
 }
 
 input[type="text"],
@@ -157,6 +158,10 @@ button {
         max-width: 300px;
         margin-left: 0vw;
         margin: auto;
+    }
+    input[type="text"],
+    input[type="number"] {
+        padding-left: 0px;
     }
     .inputDados,
     #buttonComparativo,
