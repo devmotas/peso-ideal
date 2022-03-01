@@ -42,7 +42,7 @@ function mostrar() {
     nomeCliente.innerHTML = nome.value.toUpperCase()
     nomeCliente.style.display = ("block")
     document.getElementById("data").innerHTML += " " + data()
-    document.getElementById("p1").innerHTML = altura.value
+    document.getElementById("p1").innerHTML = calcularAltura()
     document.getElementById("p2").innerHTML = peso.value
     document.getElementById("p3").innerHTML = pesoIdeal()
     document.getElementById("p4").innerHTML = imc(peso.value)
@@ -76,8 +76,12 @@ function mudarTela() {
 
 function data() {
     let date = new Date()
-    if (date.getMonth() < 10) {
+    if (date.getMonth() < 10 && date.getDate() < 10) {
+        return "0" + date.getDate() + "/" + "0" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    } else if (date.getMonth() < 10) {
         return date.getDate() + "/" + "0" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    } else if (date.getDate() < 10) {
+        return "0" + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
     } else {
         return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
     }
