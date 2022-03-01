@@ -31,8 +31,8 @@
             <input class="inputDados" id="idadeInput" type="number" placeholder="Idade">
             <input class="inputDados" id="pesoInput" type="number" placeholder="Peso">
             <input class="inputDados" id="pesoInputTrinta" type="number" placeholder="Peso 30 Dias (opcional) ">
-            <input class="sexo" name="sexo" type="radio" value="f" checked="checked" /> Feminino
-            <input class="sexo" name="sexo" type="radio" value="m" /> Masculino
+            <input class="sexo" name="sexo" type="radio" value="Feminino" checked="checked" /> Feminino
+            <input class="sexo" name="sexo" type="radio" value="Masculino" /> Masculino
             <button class="inputDados" onclick="checarDados()" id="buttonInput">Calcular</button>
         </div>
 
@@ -68,15 +68,15 @@
             <button class="buttonComparativo" onclick="mostrarComparativo()" id="buttonComparativo">Mostrar Comparativo</button>
 
             <div id="resultado">
-                <h1 id="resultadoNome">-</h1>
-                <h1 id="resultadoIdade">-</h1>
-                <h1 id="resultadoSexo">-</h1>
-                <h1 id="resultadoPeso">-</h1>
-                <h1 id="resultadoPesoIdeal">-</h1>
-                <h1 id="resultadoImc">-</h1>
-                <h1 id="resultadoMassaGorda">-</h1>
+                <h1 class="imprimirResultado" id="resultadoNome">-</h1>
+                <h1 class="imprimirResultado" id="resultadoIdade">-</h1>
+                <h1 class="imprimirResultado" id="resultadoSexo">-</h1>
+                <h1 class="imprimirResultado" id="resultadoPeso">-</h1>
+                <h1 class="imprimirResultado" id="resultadoPesoIdeal">-</h1>
+                <h1 class="imprimirResultado" id="resultadoImc">-</h1>
+                <h1 class="imprimirResultado" id="resultadoMassaGorda">-</h1>
             </div>
-            <button class="novaConsulta" onclick="atualizarPagina()" id="novaConsulta">Nova Consulta</button>
+            <button class="novaConsulta" onClick="window.location.reload()" id="novaConsulta">Nova Consulta</button>
 
         </div>
     </main>

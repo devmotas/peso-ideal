@@ -4,6 +4,7 @@ const nomeCliente = document.getElementById("nomeCliente")
 const altura = document.getElementById("alturaInput")
 var idade = document.getElementById("idadeInput")
 var sexo = document.querySelectorAll('.sexo')
+var sex = 0
 var input = document.getElementById("input")
 var dados = document.getElementById("dados")
 var logo = document.getElementById("logo")
@@ -28,13 +29,13 @@ function adicionarDados() {
     peso30Dias.style.display = "block"
 }
 
-function checarInput30Dias() {
+function checarInput30Dias(peI) {
     if (pesoInputTrinta.value != "") {
         hoje.innerHTML = ("Antes")
         proximoMes.innerHTML = ("Depois")
 
     }
-    return pesoInputTrinta.value == "" ? pesoIdeal() : pesoInputTrinta.value
+    return pesoInputTrinta.value == "" ? peI : pesoInputTrinta.value
 }
 
 function mostrar() {
@@ -56,10 +57,10 @@ function mostrar() {
 
 function mostrar30Dias() {
     document.getElementById("p6").innerHTML = altura.value
-    document.getElementById("p7").innerHTML = checarInput30Dias()
+    document.getElementById("p7").innerHTML = checarInput30Dias(pesoIdeal())
     document.getElementById("p8").innerHTML = pesoIdeal()
-    document.getElementById("p9").innerHTML = imc(checarInput30Dias())
-    document.getElementById("p10").innerHTML = massaGorda(checarInput30Dias())
+    document.getElementById("p9").innerHTML = imc(checarInput30Dias(pesoIdeal()))
+    document.getElementById("p10").innerHTML = massaGorda(checarInput30Dias(pesoIdeal()))
 }
 
 
@@ -97,17 +98,17 @@ function massaGorda(pe) {
 }
 
 function checarSexo() {
-    var sex = 0
     for (var i = 0 in sexo)
         if (sexo[i].checked)
             sex = sexo[i].value
-    return (sex == "m" ? 1 : 0).toFixed(2)
+    return (sex == "Masculino" ? 1 : 0).toFixed(2)
 }
 
 function mostrarComparativo() {
     nomeCliente.style.display = "none"
     buttonComparativo.style.display = "none"
     novaConsulta = document.getElementById("novaConsulta")
+    resultadoNome = document.getElementById("resultadoNome")
     resultadoIdade = document.getElementById("resultadoIdade")
     resultadoSexo = document.getElementById("resultadoSexo")
     resultadoPeso = document.getElementById("resultadoPeso")
@@ -120,5 +121,12 @@ function mostrarComparativo() {
     dados.style.display = "none"
     novaConsulta.style.display = "block"
 
+    resultadoNome.innerHTML = nome.value.toUpperCase()
+    resultadoIdade.innerHTML = `${idade.value} anos`
+    resultadoSexo.innerHTML = sex
+    resultadoPeso.innerHTML = `Você esta com ${checarInput30Dias(peso.value)}kg, variação de ${checarInput30Dias(peso.value) - peso.value }kg`
+    resultadoPesoIdeal.innerHTML = `Seu peso ideal é ${pesoIdeal()}`
+    resultadoImc.innerHTML = `Seu IMC é ${imc(checarInput30Dias(peso.value))}`
+    resultadoMassaGorda.innerHTML = `Sua Massa Gorda é ${massaGorda(checarInput30Dias(peso.value))}`
 
 }

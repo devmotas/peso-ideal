@@ -57,15 +57,16 @@ body {
     border: none;
 }
 
-button {
-    font-size: 1.5em;
-}
-
 #nomeCliente {
     padding: 5px;
     text-align: center;
     font-size: 3vw;
     display: none;
+}
+
+#dados>h1,
+#nomeCliente {
+    font-weight: lighter;
 }
 
 .dados {
@@ -80,8 +81,8 @@ button {
 
 #dados>p {
     padding: 1.1vw;
-    background-color: #fa45963b;
     border-radius: 3px;
+    font-weight: bold;
 }
 
 .lista {
@@ -114,6 +115,18 @@ button {
     display: none;
 }
 
-#buttonComparativo {
+#buttonComparativo,
+#novaConsulta {
     margin-top: 15px;
+}
+
+button {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #fc268671;
+}
+
+.imprimirResultado {
+    padding: 5px;
+    font-weight: lighter;
 }
