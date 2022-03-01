@@ -101,7 +101,6 @@ body {
 #buttonInput:hover,
 #buttonComparativo:hover,
 #novaConsulta:hover {
-    width: 400px;
     background-color: #fa4597;
 }
 
@@ -136,15 +135,17 @@ button {
 @media screen and (max-width: 768px) {
     body {
         background-image: url(Imagens/background-vertical.jpg);
+        overflow-y: hidden;
     }
     #dadosCabecalho {
-        padding: 30px 15px 0px 15px;
+        padding: 35px 15px 0px 15px;
         margin: 0px 0px 0px 0px;
         margin: auto;
         text-align: center;
     }
     #textoRelatorio {
         font-size: 4vw;
+        padding: 20px 20px 10px 20px;
     }
     #input {
         text-align: center;
@@ -169,7 +170,7 @@ button {
         width: 90%;
     }
     .imprimirResultado {
-        padding: 15px;
+        padding: 7px;
         font-weight: lighter;
         font-size: 5vw;
     }
