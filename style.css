@@ -47,6 +47,11 @@ body {
     margin-left: 15vw;
 }
 
+input[type="text"],
+input[type="number"] {
+    padding-left: 15px;
+}
+
 .inputDados,
 #buttonComparativo,
 #novaConsulta {

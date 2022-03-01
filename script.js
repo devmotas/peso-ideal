@@ -124,7 +124,7 @@ function mostrarComparativo() {
     resultadoNome.innerHTML = nome.value.toUpperCase()
     resultadoIdade.innerHTML = `${idade.value} anos`
     resultadoSexo.innerHTML = sex
-    resultadoPeso.innerHTML = `Você esta com ${checarInput30Dias(peso.value)}kg, variação de ${checarInput30Dias(peso.value) - peso.value }kg`
+    resultadoPeso.innerHTML = `Você está com ${checarInput30Dias(peso.value)}kg, variação de ${checarInput30Dias(peso.value) - peso.value }kg`
     resultadoPesoIdeal.innerHTML = `Seu peso ideal é ${pesoIdeal()}`
     resultadoImc.innerHTML = `Seu IMC é ${imc(checarInput30Dias(peso.value))}`
     resultadoMassaGorda.innerHTML = `Sua Massa Gorda é ${massaGorda(checarInput30Dias(peso.value))}`
