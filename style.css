@@ -4,12 +4,14 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(Imagens/background.jpg);
     background-size: cover;
     background-position: center right;
+    background-repeat: no-repeat;
 }
 
 #head {
@@ -48,7 +50,7 @@ body {
 .inputDados,
 #buttonComparativo,
 #novaConsulta {
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     margin-bottom: 10px;
     margin-top: 15px;
     border-radius: 10px;
@@ -99,7 +101,7 @@ body {
 #buttonInput:hover,
 #buttonComparativo:hover,
 #novaConsulta:hover {
-    width: 400;
+    width: 400px;
     background-color: #fa4597;
 }
 
@@ -129,4 +131,46 @@ button {
 .imprimirResultado {
     padding: 5px;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(Imagens/background-vertical.jpg);
+    }
+    #dadosCabecalho {
+        padding: 30px 15px 0px 15px;
+        margin: 0px 0px 0px 0px;
+        margin: auto;
+        text-align: center;
+    }
+    #textoRelatorio {
+        font-size: 4vw;
+    }
+    #input {
+        text-align: center;
+        max-width: 300px;
+        margin-left: 0vw;
+        margin: auto;
+    }
+    .inputDados,
+    #buttonComparativo,
+    #novaConsulta {
+        text-align: center;
+        width: 300px;
+    }
+    #nomeCliente {
+        padding: 5px;
+        font-size: 5vw;
+    }
+    #dados>h1 {
+        font-size: 5vw;
+    }
+    .dados {
+        width: 90%;
+    }
+    .imprimirResultado {
+        padding: 15px;
+        font-weight: lighter;
+        font-size: 5vw;
+    }
 }
