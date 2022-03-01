@@ -158,6 +158,10 @@ button {
         margin-left: 0vw;
         margin: auto;
     }
+    input[type="text"],
+    input[type="number"] {
+        padding-left: 0px;
+    }
     .inputDados,
     #buttonComparativo,
     #novaConsulta {
