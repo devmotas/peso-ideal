@@ -28,3 +28,5 @@ git clone https://github.com/devmotas/peso-ideal
 # Autor
 
 Gustavo Philippe Militão Mota
+
+https://www.linkedin.com/in/devmotas
